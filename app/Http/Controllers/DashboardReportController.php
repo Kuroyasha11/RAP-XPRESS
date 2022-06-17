@@ -11,7 +11,7 @@ class DashboardReportController extends Controller
     {
         Session::put('index', request()->fullUrl());
         return view('backend.report.index', [
-            'title' => 'Laporan'
+            'title' => 'Laporan',
         ]);
     }
 }

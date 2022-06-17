@@ -54,4 +54,12 @@
         <!-- /.card-body -->
     </div>
     <!-- /.card -->
+
+    {{-- <script>
+        $(function (){
+            $.ajaxSetup({
+                headeers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') }
+            })
+        })
+    </script> --}}
 @endsection

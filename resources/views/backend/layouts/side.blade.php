@@ -32,8 +32,8 @@
         <!-- Nav Item - Pages Collapse Menu -->
         <li
             class="nav-item  {{ Request::is('dashboard/partner*') ? 'active' : '' }} {{ Request::is('dashboard/registration*') ? 'active' : '' }}">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
-                aria-controls="collapseTwo">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                aria-expanded="true" aria-controls="collapseTwo">
                 <i class='fa fa-user'></i>
                 <span>Mitra RAP-XPRESS</span>
             </a>
@@ -54,9 +54,9 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li
-            class="nav-item {{ Request::is('dashboard/permintaan*') ? 'active' : '' }} {{ Request::is('dashboard/pengiriman*') ? 'active' : '' }} {{ Request::is('dashboard/pickup*') ? 'active' : '' }} {{ Request::is('dashboard/kurir*') ? 'active' : '' }}">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"
-                aria-controls="collapseThree">
+            class="nav-item {{ Request::is('dashboard/permintaan*') ? 'active' : '' }} {{ Request::is('dashboard/pengiriman*') ? 'active' : '' }} {{ Request::is('dashboard/pickup*') ? 'active' : '' }} {{ Request::is('dashboard/kurir*') ? 'active' : '' }} {{ Request::is('dashboard/laporan*') ? 'active' : '' }}">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
+                aria-expanded="true" aria-controls="collapseThree">
                 <i class='fa fa-boxes'></i>
                 <span>Paket</span>
             </a>
@@ -72,6 +72,9 @@
                         href="/dashboard/pickup"><i class="fa fa-truck-pickup"></i> Pengambilan Paket</a>
                     <a class="collapse-item {{ Request::is('dashboard/kurir*') ? 'active' : '' }}"
                         href="/dashboard/kurir"><i class='fa fa-shipping-fast'></i> Pengiriman Paket</a>
+                    <h6 class="collapse-header">Laporan :</h6>
+                    <a class="collapse-item {{ Request::is('dashboard/laporan*') ? 'active' : '' }}"
+                        href="/dashboard/laporan"><i class="bi bi-archive-fill"></i> Laporan</a>
                 </div>
             </div>
         </li>
@@ -82,8 +85,8 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item {{ Request::is('dashboard/slide*') ? 'active' : '' }} ">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true"
-                aria-controls="collapseFive">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFive"
+                aria-expanded="true" aria-controls="collapseFive">
                 <i class="far fa-newspaper"></i>
                 <span>Main Page</span>
             </a>
@@ -108,8 +111,8 @@
         <!-- Nav Item - Pages Collapse Menu -->
         <li
             class="nav-item {{ Request::is('dashboard/paket*') ? 'active' : '' }} {{ Request::is('dashboard/pengambilan-paket*') ? 'active' : '' }} {{ Request::is('dashboard/pengiriman-paket*') ? 'active' : '' }}">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true"
-                aria-controls="collapseFour">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour"
+                aria-expanded="true" aria-controls="collapseFour">
                 <i class='fa fa-truck'></i>
                 <span>Service</span>
             </a>

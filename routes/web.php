@@ -8,6 +8,7 @@ use App\Http\Controllers\DashboardPackageController;
 use App\Http\Controllers\DashboardPartnerController;
 use App\Http\Controllers\DashboardPickUpController;
 use App\Http\Controllers\DashboardRegistrationController;
+use App\Http\Controllers\DashboardReportController;
 use App\Http\Controllers\DashboardRequestController;
 use App\Http\Controllers\DashboardSlideController;
 use App\Http\Controllers\DriverController;
@@ -90,6 +91,8 @@ Route::put('/dashboard/kurir/paket/delete/{delete}', [DashboardCourierController
 Route::put('/dashboard/kurir/kurir/{kurir}', [DashboardCourierController::class, 'terimakurir'])->middleware(['auth', 'admin']);
 Route::put('/dashboard/kurir/selesai/{selesai}', [DashboardCourierController::class, 'selesai'])->middleware(['auth', 'admin']);
 Route::resource('/dashboard/kurir', DashboardCourierController::class)->middleware(['auth', 'admin']);
+
+Route::get('/dashboard/laporan', [DashboardReportController::class, 'index'])->middleware(['auth', 'admin']);
 
 Route::resource('/dashboard/slide', DashboardSlideController::class)->middleware(['auth', 'admin'])->except(['show']);
 // Route::resource('/dashboard/post', DashboardPostController::class)->middleware(['auth', 'admin']);

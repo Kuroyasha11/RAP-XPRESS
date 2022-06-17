@@ -30,6 +30,20 @@
 
     {{-- Bootstrap Icon --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+    {{-- ADMIN LTE --}}
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/assets/admin-lte/plugins/fontawesome-free/css/all.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="/assets/admin-lte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="/assets/admin-lte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="/assets/admin-lte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/assets/admin-lte/dist/css/adminlte.min.css">
+
 </head>
 
 <body id="page-top">
@@ -81,13 +95,12 @@
                 </div>
 
                 <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                    <li class="ms-3"><a class="text-muted" href="https://wa.me/6281274744500"
-                            target="__blank"><i class="bi-whatsapp fs-3"></i></a></li>
+                    <li class="ms-3"><a class="text-muted" href="https://wa.me/6281274744500" target="__blank"><i
+                                class="bi-whatsapp fs-3"></i></a></li>
                     <li class="ms-3"><a class="text-muted" href="https://facebook.com/oke.k.palembang"
                             target="__blank"><i class="bi-facebook fs-3"></i></a></li>
-                    <li class="ms-3"><a class="text-muted"
-                            href="https://instagram.com/rap_xpress_palembang" target="__blank"><i
-                                class="bi-instagram fs-3"></i></a></li>
+                    <li class="ms-3"><a class="text-muted" href="https://instagram.com/rap_xpress_palembang"
+                            target="__blank"><i class="bi-instagram fs-3"></i></a></li>
                 </ul>
             </footer>
             <!-- End of Footer -->
@@ -128,6 +141,48 @@
 
     {{-- <script src="/assets/sbadmin2/bootstrap/dist/js/bootstrap.bundle.js"></script> --}}
 
+    {{-- ADMIN LTE --}}
+    <!-- jQuery -->
+    <script src="/assets/admin-lte/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="/assets/admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables  & Plugins -->
+    <script src="/assets/admin-lte/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="/assets/admin-lte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="/assets/admin-lte/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="/assets/admin-lte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="/assets/admin-lte/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="/assets/admin-lte/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="/assets/admin-lte/plugins/jszip/jszip.min.js"></script>
+    <script src="/assets/admin-lte/plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="/assets/admin-lte/plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="/assets/admin-lte/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="/assets/admin-lte/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="/assets/admin-lte/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="/assets/admin-lte/dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="/assets/admin-lte/dist/js/demo.js"></script>
+    <!-- Page specific script -->
+    <script>
+        $(function() {
+            $("#example1").DataTable({
+                "responsive": true,
+                "lengthChange": false,
+                "autoWidth": false,
+                "buttons": ["excel", "pdf"]
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+        });
+    </script>
 
 </body>
 

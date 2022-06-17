@@ -12,6 +12,14 @@
         </div>
     @endif
 
+    <div class="d-flex col-lg-5">
+        <select name="kurir" id="kurir" class="form-select">
+            <option>Pilih Kurir...</option>
+            @foreach ($kurir as $item)
+                <option value="{{ $item->id }}">{{ $item->name }}</option>
+            @endforeach
+        </select>
+    </div>
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">DataTable with default features</h3>
@@ -29,14 +37,9 @@
                         <th>Tanggal</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="data_table">
                     <tr align="CENTER">
-                        <td>1</td>
-                        <td align="LEFT">Ricky Andrean</td>
-                        <td>2</td>
-                        <td>5</td>
-                        <td>7</td>
-                        <td>12 Juni 2022 - 18 Juni 2022</td>
+                        <td colspan="6">Silahkan pilih data laporan</td>
                     </tr>
                 </tbody>
                 <tfoot>
@@ -55,11 +58,28 @@
     </div>
     <!-- /.card -->
 
-    {{-- <script>
-        $(function (){
+    <script>
+        $(function() {
             $.ajaxSetup({
-                headeers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') }
-            })
-        })
-    </script> --}}
+                headeers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            $(function() {
+
+                $('#kurir').on('change', function() {
+                    let nama_kurir = $('#kurir').val();
+
+                    console.log(nama_kurir);
+                })
+            });
+
+
+
+
+
+
+        });
+    </script>
 @endsection

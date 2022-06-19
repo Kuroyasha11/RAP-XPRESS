@@ -6,7 +6,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="/assets/icon/RAP.ico" type="image/x-icon">
 
     <title>RAP-XPRESS | {{ $title }}</title>
@@ -115,11 +114,6 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    {{-- Jquery 3.6.0 --}}
-    {{-- <script src="/assets/jquery/jquery-3.6.0.min.js"></script> --}}
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
     {{-- BOOTSTRAP JS --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
@@ -144,48 +138,9 @@
 
     {{-- <script src="/assets/sbadmin2/bootstrap/dist/js/bootstrap.bundle.js"></script> --}}
 
-    {{-- ADMIN LTE --}}
-    <!-- jQuery -->
-    <script src="/assets/admin-lte/plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap 4 -->
-    <script src="/assets/admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- DataTables  & Plugins -->
-    <script src="/assets/admin-lte/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="/assets/admin-lte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-    <script src="/assets/admin-lte/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="/assets/admin-lte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-    <script src="/assets/admin-lte/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="/assets/admin-lte/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-    <script src="/assets/admin-lte/plugins/jszip/jszip.min.js"></script>
-    <script src="/assets/admin-lte/plugins/pdfmake/pdfmake.min.js"></script>
-    <script src="/assets/admin-lte/plugins/pdfmake/vfs_fonts.js"></script>
-    <script src="/assets/admin-lte/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-    <script src="/assets/admin-lte/plugins/datatables-buttons/js/buttons.print.min.js"></script>
-    <script src="/assets/admin-lte/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="/assets/admin-lte/dist/js/adminlte.min.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="/assets/admin-lte/dist/js/demo.js"></script>
-    <!-- Page specific script -->
-    <script>
-        $(function() {
-            $("#example1").DataTable({
-                "responsive": true,
-                "lengthChange": false,
-                "autoWidth": false,
-                "buttons": ["excel", "pdf"]
-            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-            $('#example2').DataTable({
-                "paging": true,
-                "lengthChange": false,
-                "searching": false,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false,
-                "responsive": true,
-            });
-        });
-    </script>
+    {{-- Popper js --}}
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+
 
 </body>
 

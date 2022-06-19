@@ -144,8 +144,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="/dashboard/pengambilan-paket/paket/{{ $paket->slug }}" method="post"
-                        class="mb-5" enctype="multipart/form-data">
+                    <form action="/dashboard/pengambilan-paket/paket/{{ $paket->slug }}" method="post" class="mb-5"
+                        enctype="multipart/form-data">
                         @method('put')
                         @csrf
                         <div class="mb-3">

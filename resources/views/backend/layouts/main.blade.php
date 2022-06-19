@@ -29,19 +29,6 @@
     {{-- Bootstrap Icon --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-    {{-- ADMIN LTE --}}
-    <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="/assets/admin-lte/plugins/fontawesome-free/css/all.min.css">
-    <!-- DataTables -->
-    <link rel="stylesheet" href="/assets/admin-lte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="/assets/admin-lte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-    <link rel="stylesheet" href="/assets/admin-lte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="/assets/admin-lte/dist/css/adminlte.min.css">
-
 </head>
 
 <body id="page-top">
@@ -140,7 +127,6 @@
 
     {{-- Popper js --}}
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
-
 
 </body>
 

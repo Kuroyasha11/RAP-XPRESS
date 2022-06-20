@@ -46,7 +46,9 @@
                                 @endif
                             </td>
                             <td>{{ $courier->nama }}</td>
-                            <td>{{ $item->created_at }}</td>
+                            <td>
+                                {{ $item->created_at->isoFormat('dddd, D MMMM Y') }}
+                            </td>
                         </tr>
                     @endforeach
                 @else

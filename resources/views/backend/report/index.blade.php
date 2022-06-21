@@ -20,6 +20,7 @@
                 @csrf
                 <label for="form-label">Pencarian data berdasarkan tanggal:</label>
                 <input type="date" class="form-control" name="tanggal1">
+                <label for="from-label"> Ke:</label>
                 <input type="date" class="form-control" name="tanggal2">
                 <button type="submit" class="btn btn-danger">Cari</button>
             </form>

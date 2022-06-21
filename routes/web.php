@@ -93,6 +93,7 @@ Route::put('/dashboard/kurir/selesai/{selesai}', [DashboardCourierController::cl
 Route::resource('/dashboard/kurir', DashboardCourierController::class)->middleware(['auth', 'admin']);
 
 Route::get('/dashboard/laporan', [DashboardReportController::class, 'index'])->middleware(['auth', 'admin']);
+Route::post('/dashboard/laporan', [DashboardReportController::class, 'index'])->middleware(['auth', 'admin']);
 
 Route::resource('/dashboard/slide', DashboardSlideController::class)->middleware(['auth', 'admin'])->except(['show']);
 // Route::resource('/dashboard/post', DashboardPostController::class)->middleware(['auth', 'admin']);

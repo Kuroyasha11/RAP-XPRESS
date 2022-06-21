@@ -18,6 +18,22 @@
             {{ $paket->links() }}
         </div>
 
+        <div class="col-lg-5 d-flex justify-content-between">
+            <form action="/dashboard/laporan" method="post">
+                @csrf
+                <label for="form-label">Pencarian data berdasarkan tanggal:</label>
+                <input type="date" class="form-control" name="tanggal1">
+                <input type="date" class="form-control" name="tanggal2">
+                <button type="submit" class="btn btn-danger">Cari</button>
+            </form>
+            <form action="/dashboard/laporan" method="get">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Cari Kurir.." name="search" id="search">
+                    <button class="btn btn-outline-light btn-danger" type="submit"><i class="bi bi-search"></i></button>
+                </div>
+            </form>
+        </div>
+
         <table class="table table table-striped table-bordered display" id="datatable">
             <thead>
                 <tr align="center">
@@ -41,14 +57,14 @@
                             <td>{{ $item->nama }}</td>
                             <td>
                                 @if ($pickup)
-                                    {{ $pickup->nama }}
+                                    {{ $pickup->author->name }}
                                 @else
                                     -
                                 @endif
                             </td>
-                            <td>{{ $courier->nama }}</td>
+                            <td>{{ $courier->author->name }}</td>
                             <td>
-                                {{ $item->created_at->isoFormat('DD/MM/Y') }}
+                                {{ $item->created_at->isoFormat('dddd, DD MMMM Y') }}
                             </td>
                         </tr>
                     @endforeach

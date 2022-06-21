@@ -25,14 +25,13 @@ class DashboardReportController extends Controller
                     ->where('selesai', true)
                     ->WhereBetween('created_at', [$dari, $ke])
                     ->latest()
-                    ->paginate(20)
-                    ->withQueryString()
+                    ->get()
             ]);
         } else {
             Session::put('index', request()->fullUrl());
             return view('backend.report.index', [
                 'title' => 'Laporan',
-                'paket' => Package::where('terima', true)->where('diambil', true)->where('selesai', true)->latest()->paginate(20)->withQueryString()
+                'paket' => Package::where('terima', true)->where('diambil', true)->where('selesai', true)->latest()->get()
             ]);
         }
     }

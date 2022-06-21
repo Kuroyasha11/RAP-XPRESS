@@ -23,11 +23,22 @@
 
     <!-- Custom styles for this template-->
     <link href="/assets/sbadmin2/css/sb-admin-2.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="/assets/sbadmin2/bootstrap/dist/css/bootstrap.css">
 
     {{-- Bootstrap Icon --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+    {{-- ADMIN LTE --}}
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/assets/admin-lte/plugins/fontawesome-free/css/all.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="/assets/admin-lte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="/assets/admin-lte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="/assets/admin-lte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
 
 </head>
 
@@ -105,6 +116,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
+    {{-- <script src="/assets/sbadmin2/bootstrap/dist/js/bootstrap.bundle.js"></script> --}}
 
     <!-- Bootstrap core JavaScript-->
     <script src="/assets/sbadmin2/vendor/jquery/jquery.min.js"></script>
@@ -123,13 +135,30 @@
     <script src="/assets/sbadmin2/js/demo/chart-area-demo.js"></script>
     <script src="/assets/sbadmin2/js/demo/chart-pie-demo.js"></script>
 
-    {{-- <script src="/assets/sbadmin2/bootstrap/dist/js/bootstrap.bundle.js"></script> --}}
-
     {{-- Popper js --}}
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
 
     <!--Jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> --}}
+
+    {{-- ADMIN LTE --}}
+    <!-- jQuery -->
+    <script src="/assets/admin-lte/plugins/jquery/jquery.min.js"></script>
+    <!-- DataTables  & Plugins -->
+    <script src="/assets/admin-lte/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="/assets/admin-lte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="/assets/admin-lte/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="/assets/admin-lte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="/assets/admin-lte/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="/assets/admin-lte/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="/assets/admin-lte/plugins/jszip/jszip.min.js"></script>
+    <script src="/assets/admin-lte/plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="/assets/admin-lte/plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="/assets/admin-lte/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="/assets/admin-lte/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="/assets/admin-lte/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="/assets/admin-lte/dist/js/adminlte.min.js"></script>
 
 </body>
 

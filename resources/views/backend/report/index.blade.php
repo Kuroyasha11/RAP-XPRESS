@@ -14,11 +14,8 @@
     @endif
 
     <div class="table-responsive col-lg-15 mb-5">
-        <div class="d-flex justify-content-between">
-            {{ $paket->links() }}
-        </div>
 
-        <div class="col-lg-5 d-flex justify-content-between">
+        <div class="col-lg-5 d-flex">
             <form action="/dashboard/laporan" method="post">
                 @csrf
                 <label for="form-label">Pencarian data berdasarkan tanggal:</label>
@@ -26,17 +23,11 @@
                 <input type="date" class="form-control" name="tanggal2">
                 <button type="submit" class="btn btn-danger">Cari</button>
             </form>
-            <form action="/dashboard/laporan" method="get">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Cari Kurir.." name="search" id="search">
-                    <button class="btn btn-outline-light btn-danger" type="submit"><i class="bi bi-search"></i></button>
-                </div>
-            </form>
         </div>
 
-        <table class="table table table-striped table-bordered display" id="datatable">
+        <table id="example1" class="table table-striped table-bordered display">
             <thead>
-                <tr align="center">
+                <tr align="CENTER">
                     <th scope="col">No</th>
                     <th scope="col">Paket</th>
                     <th scope="col">Kurir Pengambilan</th>
@@ -79,5 +70,17 @@
             </tbody>
         </table>
     </div>
+
+    <!-- Page specific script -->
+    <script>
+        $(function() {
+            $("#example1").DataTable({
+                "responsive": true,
+                "lengthChange": false,
+                "autoWidth": false,
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        });
+    </script>
 
 @endsection

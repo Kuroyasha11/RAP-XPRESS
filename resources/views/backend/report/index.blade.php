@@ -17,13 +17,7 @@
         <div class="d-flex justify-content-between">
             {{ $paket->links() }}
         </div>
-        <div class="col-lg-5" id="date_filter">
-            <span id="date-label-from" class="date-label">Tanggal Awal : </span> <input type="text"
-                class="data_tange_filter" id="datepicker_from">
-            <br>
-            <span id="date-label-to" class="date-label">Tanggal Akhir : </span> <input type="text"
-                class="data_tange_filter" id="datepicker_to">
-        </div>
+
         <table class="table table table-striped table-bordered display" id="datatable">
             <thead>
                 <tr align="center">
@@ -69,7 +63,5 @@
             </tbody>
         </table>
     </div>
-
-    <script src="/assets/datatables/script.js"></script>
 
 @endsection

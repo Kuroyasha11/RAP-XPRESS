@@ -14,12 +14,21 @@
     @endif
 
     <div class="table-responsive col-lg-15 mb-5">
-        <div class="d-flex justify-content-between">
-            {{ $paket->links() }}
+
+        <div class="col-lg-5 d-flex">
+            <form action="/dashboard/laporan" method="post">
+                @csrf
+                <label for="form-label">Pencarian data berdasarkan tanggal:</label>
+                <input type="date" class="form-control" name="tanggal1">
+                <label for="from-label"> Ke:</label>
+                <input type="date" class="form-control" name="tanggal2">
+                <button type="submit" class="btn btn-danger">Cari</button>
+            </form>
         </div>
-        <table class="table table table-striped table-bordered" id="example">
+        <hr>
+        <table id="example" class="table table-striped table-bordered display nowrap" style="100%">
             <thead>
-                <tr align="center">
+                <tr align="CENTER">
                     <th scope="col">No</th>
                     <th scope="col">Paket</th>
                     <th scope="col">Kurir Pengambilan</th>
@@ -40,13 +49,15 @@
                             <td>{{ $item->nama }}</td>
                             <td>
                                 @if ($pickup)
-                                    {{ $pickup->nama }}
+                                    {{ $pickup->author->name }}
                                 @else
                                     -
                                 @endif
                             </td>
-                            <td>{{ $courier->nama }}</td>
-                            <td>{{ $item->created_at }}</td>
+                            <td>{{ $courier->author->name }}</td>
+                            <td>
+                                {{ $item->created_at->isoFormat('dddd, DD MMMM Y') }}
+                            </td>
                         </tr>
                     @endforeach
                 @else
@@ -61,71 +72,15 @@
         </table>
     </div>
 
-    <script type="text/javascript">
-        //fungsi untuk filtering data berdasarkan tanggal 
-        var start_date;
-        var end_date;
-        var DateFilterFunction = (function(oSettings, aData, iDataIndex) {
-            var dateStart = parseDateValue(start_date);
-            var dateEnd = parseDateValue(end_date);
-            //Kolom tanggal yang akan kita gunakan berada dalam urutan 2, karena dihitung mulai dari 0
-            //nama depan = 0
-            //nama belakang = 1
-            //tanggal terdaftar =2
-            var evalDate = parseDateValue(aData[2]);
-            if ((isNaN(dateStart) && isNaN(dateEnd)) ||
-                (isNaN(dateStart) && evalDate <= dateEnd) ||
-                (dateStart <= evalDate && isNaN(dateEnd)) ||
-                (dateStart <= evalDate && evalDate <= dateEnd)) {
-                return true;
-            }
-            return false;
-        });
-
-        // fungsi untuk converting format tanggal dd/mm/yyyy menjadi format tanggal javascript menggunakan zona aktubrowser
-        function parseDateValue(rawDate) {
-            var dateArray = rawDate.split("/");
-            var parsedDate = new Date(dateArray[2], parseInt(dateArray[1]) - 1, dateArray[
-                0]); // -1 because months are from 0 to 11   
-            return parsedDate;
-        }
-
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
         $(document).ready(function() {
-            //konfigurasi DataTable pada tabel dengan id example dan menambahkan  div class dateseacrhbox dengan dom untuk meletakkan inputan daterangepicker
-            var $dTable = $('#example').DataTable({
-                "dom": "<'row'<'col-sm-4'l><'col-sm-5' <'datesearchbox'>><'col-sm-3'f>>" +
-                    "<'row'<'col-sm-12'tr>>" +
-                    "<'row'<'col-sm-5'i><'col-sm-7'p>>"
-            });
-
-            //menambahkan daterangepicker di dalam datatables
-            $("div.datesearchbox").html(
-                '<div class="input-group"> <div class="input-group-addon"> <i class="glyphicon glyphicon-calendar"></i> </div><input type="text" class="form-control pull-right" id="datesearch" placeholder="Search by date range.."> </div>'
-            );
-
-            document.getElementsByClassName("datesearchbox")[0].style.textAlign = "right";
-
-            //konfigurasi daterangepicker pada input dengan id datesearch
-            $('#datesearch').daterangepicker({
-                autoUpdateInput: false
-            });
-
-            //menangani proses saat apply date range
-            $('#datesearch').on('apply.daterangepicker', function(ev, picker) {
-                $(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format(
-                    'DD/MM/YYYY'));
-                start_date = picker.startDate.format('DD/MM/YYYY');
-                end_date = picker.endDate.format('DD/MM/YYYY');
-                $.fn.dataTableExt.afnFiltering.push(DateFilterFunction);
-                $dTable.draw();
-            });
-
-            $('#datesearch').on('cancel.daterangepicker', function(ev, picker) {
-                $(this).val('');
-                start_date = '';
-                end_date = '';
-                $.fn.dataTable.ext.search.splice($.fn.dataTable.ext.search.indexOf(DateFilterFunction, 1));
-                $dTable.draw();
+            $('#example').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    // 'copy', 'csv', 
+                    'excel', 'pdf', 'print'
+                ]
             });
         });
     </script>

@@ -23,17 +23,15 @@
 
     <!-- Custom styles for this template-->
     <link href="/assets/sbadmin2/css/sb-admin-2.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="/assets/sbadmin2/bootstrap/dist/css/bootstrap.css">
 
     {{-- Bootstrap Icon --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-    {{-- DataTables Date --}}
-    <!--DataTables -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap.min.css" />
-    <!--Daterangepicker -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <!-- DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
+
 
 </head>
 
@@ -111,6 +109,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
+    {{-- <script src="/assets/sbadmin2/bootstrap/dist/js/bootstrap.bundle.js"></script> --}}
 
     <!-- Bootstrap core JavaScript-->
     <script src="/assets/sbadmin2/vendor/jquery/jquery.min.js"></script>
@@ -129,20 +128,18 @@
     <script src="/assets/sbadmin2/js/demo/chart-area-demo.js"></script>
     <script src="/assets/sbadmin2/js/demo/chart-pie-demo.js"></script>
 
-    {{-- <script src="/assets/sbadmin2/bootstrap/dist/js/bootstrap.bundle.js"></script> --}}
-
     {{-- Popper js --}}
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
 
-    {{-- DataTables Date --}}
-    <!--Jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!--DataTables -->
-    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap.min.js"></script>
-    <!--DateRangePicker -->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    {{-- DATA TABLES --}}
+
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
 
 </body>
 

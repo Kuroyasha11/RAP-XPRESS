@@ -18,7 +18,8 @@ class Package extends Model
     {
         $query->when($filters['search'] ?? false, function ($query, $search) {
             return $query->where(function ($query) use ($search) {
-                $query->where('nama', 'like', '%' . $search . '%')->orWhere('slug', $search);
+                $query->where('nama', 'like', '%' . $search . '%')
+                    ->orWhere('slug', $search);
             });
         });
     }

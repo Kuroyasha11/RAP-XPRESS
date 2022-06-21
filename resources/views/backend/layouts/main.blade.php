@@ -28,16 +28,9 @@
     {{-- Bootstrap Icon --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-    {{-- ADMIN LTE --}}
-    <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="/assets/admin-lte/plugins/fontawesome-free/css/all.min.css">
     <!-- DataTables -->
-    <link rel="stylesheet" href="/assets/admin-lte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="/assets/admin-lte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-    <link rel="stylesheet" href="/assets/admin-lte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
 
 
 </head>
@@ -137,28 +130,6 @@
 
     {{-- Popper js --}}
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
-
-    <!--Jquery -->
-    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> --}}
-
-    {{-- ADMIN LTE --}}
-    <!-- jQuery -->
-    <script src="/assets/admin-lte/plugins/jquery/jquery.min.js"></script>
-    <!-- DataTables  & Plugins -->
-    <script src="/assets/admin-lte/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="/assets/admin-lte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-    <script src="/assets/admin-lte/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="/assets/admin-lte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-    <script src="/assets/admin-lte/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="/assets/admin-lte/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-    <script src="/assets/admin-lte/plugins/jszip/jszip.min.js"></script>
-    <script src="/assets/admin-lte/plugins/pdfmake/pdfmake.min.js"></script>
-    <script src="/assets/admin-lte/plugins/pdfmake/vfs_fonts.js"></script>
-    <script src="/assets/admin-lte/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-    <script src="/assets/admin-lte/plugins/datatables-buttons/js/buttons.print.min.js"></script>
-    <script src="/assets/admin-lte/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="/assets/admin-lte/dist/js/adminlte.min.js"></script>
 
 </body>
 
